@@ -2,6 +2,8 @@
 
 This native module proves sqlite bindings for janet.
 
+This fork updates sqlite to version 3.40.1 and includes some optional modules: json, rtree, and fts5.
+
 ## Install
 
 ```
@@ -29,7 +31,7 @@ export JANET_SYSTEM_SQLITE=1
 jpm build
 ```
 
-Note, if you intead to install the package globally, use:
+Note, if you intend to install the package globally, use:
 
 ```
 sudo -E jpm build
