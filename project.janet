@@ -31,6 +31,10 @@
     :defines {"USE_SYSTEM_SQLITE" use-system-lib})
   (declare-native
     :name "sqlite3"
+    :cflags ["-DSQLITE_THREADSAFE=0" "-DSQLITE_ENABLE_FTS4"
+             "-DSQLITE_ENABLE_FTS5" "-DSQLITE_ENABLE_JSON1"
+             "-DSQLITE_ENABLE_RTREE" "-DSQLITE_ENABLE_EXPLAIN_COMMENTS"
+             "-DHAVE_USLEEP" "-DHAVE_READLINE"]
     :source @["sqlite3.c" "main.c"])
 )
 
